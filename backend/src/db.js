@@ -11,7 +11,6 @@ if (!fs.existsSync(dataDir)) {
 
 const db = new Database(path.resolve(DB_PATH));
 
-db.exec('PRAGMA journal_mode = WAL');
 db.exec('PRAGMA foreign_keys = ON');
 
 const schema = fs.readFileSync(

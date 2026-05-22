@@ -11,13 +11,14 @@ const { initSocketHandlers } = require('./socket/wheelSocket');
 const app = express();
 const server = http.createServer(app);
 
+const ALLOWED_ORIGIN = process.env.FRONTEND_URL || '*';
+
 const io = new Server(server, {
-  cors: { origin: '*', methods: ['GET', 'POST', 'PUT'] }
+  cors: { origin: ALLOWED_ORIGIN, methods: ['GET', 'POST', 'PUT'], credentials: true }
 });
 
-app.use(cors());
+app.use(cors({ origin: ALLOWED_ORIGIN, credentials: true }));
 app.use(express.json());
-app.use(express.static('../frontend'));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/wheel', wheelRoutes);

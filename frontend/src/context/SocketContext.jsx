@@ -9,7 +9,7 @@ export function SocketProvider({ children }) {
 
   useEffect(() => {
     const token = localStorage.getItem('token')
-    socketRef.current = io('http://localhost:3001', {
+    socketRef.current = io(import.meta.env.VITE_API_URL || 'http://localhost:3001', {
       auth: { token },
       transports: ['websocket'],
     })
