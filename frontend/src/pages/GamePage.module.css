@@ -1,0 +1,59 @@
+.page { min-height: 100vh; display: flex; flex-direction: column; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+}
+
+.wheelCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.sideCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noWheel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-height: 420px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.emptyArt {
+  font-size: 6rem;
+  animation: floatAnim 3s ease-in-out infinite;
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.emptyTitle {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.8rem;
+  color: var(--muted);
+}
+
+.emptyText { color: var(--muted); font-size: 1rem; font-weight: 600; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sideCol { order: -1; }
+}

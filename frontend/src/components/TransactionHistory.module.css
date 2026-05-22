@@ -1,0 +1,21 @@
+.card { background: var(--card); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.title { font-family: 'Fredoka One', cursive; font-size: 1.1rem; }
+.refresh { background: transparent; border: 2px solid var(--border); border-radius: 50%; width: 30px; height: 30px; font-size: 1rem; color: var(--muted); transition: all 0.2s; }
+.refresh:hover { border-color: var(--blue); color: var(--blue); }
+
+.list { display: flex; flex-direction: column; gap: 5px; max-height: 180px; overflow-y: auto; }
+.empty { color: var(--muted); font-size: 0.875rem; text-align: center; padding: 12px 0; font-weight: 600; }
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: #F8F9FA;
+}
+.desc { font-size: 0.8rem; font-weight: 700; color: var(--muted); }
+.amt { font-weight: 900; font-size: 0.9rem; }
+.pos { color: #00C853; }
+.neg { color: #FF3B3B; }

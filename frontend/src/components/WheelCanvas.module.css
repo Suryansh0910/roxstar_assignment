@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.canvas {
+  border-radius: 50%;
+  box-shadow:
+    0 8px 40px rgba(0,0,0,0.18),
+    0 0 0 8px #fff,
+    0 0 0 12px #FFD700,
+    0 0 0 14px #FF3B3B;
+  display: block;
+}
+
+.pointer {
+  font-size: 2.2rem;
+  color: #FF3B3B;
+  margin-top: -6px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  animation: pointerBounce 0.6s ease-in-out infinite alternate;
+}
+
+.pointerSpin {
+  animation: pointerFast 0.2s ease-in-out infinite alternate;
+  color: #FF6D00;
+}
+
+@keyframes pointerBounce {
+  from { transform: translateY(-3px); }
+  to   { transform: translateY(3px); }
+}
+
+@keyframes pointerFast {
+  from { transform: translateY(-4px) scale(1.1); }
+  to   { transform: translateY(4px) scale(0.95); }
+}

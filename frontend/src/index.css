@@ -1,0 +1,46 @@
+/* ============================================================
+   ROXSTAR — Carnival Light Theme Global Styles
+   ============================================================ */
+:root {
+  --red:    #FF3B3B;
+  --yellow: #FFD700;
+  --blue:   #2979FF;
+  --green:  #00C853;
+  --purple: #9C27B0;
+  --orange: #FF6D00;
+  --pink:   #FF4081;
+  --teal:   #00BCD4;
+
+  --bg:       #FFF8F0;
+  --card:     #FFFFFF;
+  --border:   #EDE8F5;
+  --text:     #1A1A2E;
+  --muted:    #6B6B8A;
+  --shadow:   0 4px 20px rgba(0,0,0,0.07);
+  --shadow-lg:0 8px 40px rgba(0,0,0,0.12);
+  --radius:   16px;
+  --radius-sm:8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(255,215,0,0.13) 0%, transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(255,59,59,0.09) 0%, transparent 40%),
+    radial-gradient(circle at 60% 45%, rgba(41,121,255,0.06) 0%, transparent 30%);
+  min-height: 100vh;
+  color: var(--text);
+}
+
+a { text-decoration: none; color: inherit; }
+
+button { cursor: pointer; font-family: 'Nunito', sans-serif; border: none; }
+
+input, select { font-family: 'Nunito', sans-serif; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
